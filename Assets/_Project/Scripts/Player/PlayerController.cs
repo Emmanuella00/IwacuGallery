@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable() => playerMap.Disable();
 
+    public bool ControlEnabled => controlEnabled;
     private void Start() => SetControlEnabled(true);
 
     private void Update()

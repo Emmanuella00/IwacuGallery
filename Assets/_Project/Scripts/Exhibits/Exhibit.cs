@@ -29,7 +29,7 @@ public class Exhibit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        Debug.Log($"{name}: player entered range");
+       
         IsInRange = true;
         RefreshRing();
     }
