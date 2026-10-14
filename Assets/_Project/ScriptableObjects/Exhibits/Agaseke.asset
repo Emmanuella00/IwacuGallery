@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4cb69ad052dae745a2fb1c6941545a9, type: 3}
+  m_Name: Agaseke
+  m_EditorClassIdentifier: Assembly-CSharp::ExhibitData
+  title: Agaseke
+  subtitle: Traditional Woven Basket
+  story: 'A traditional Rwandese woven basket. It is characterized by its flat circular
+    base that is taller than it is wide, with a sloped conical fitted lid. It is
+    also a symbol of peace and goodwill amongst families and friends. '
+  image: {fileID: 21300000, guid: f422deb60b4e66840aa62c58df8cc01f, type: 3}
+  sourceCredit: Wikipedia
