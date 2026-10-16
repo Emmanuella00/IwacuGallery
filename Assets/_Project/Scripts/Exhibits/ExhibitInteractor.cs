@@ -24,6 +24,7 @@ public class ExhibitInteractor : MonoBehaviour
     [SerializeField] private TMP_Text promptLabel;
     [SerializeField] private Color idleColor = Color.white;
     [SerializeField] private Color targetColor = new Color(0.2f, 0.9f, 0.5f);
+    [SerializeField] private GameObject mobileInspectButton;
 
     private InputAction interactAction;
     private Exhibit currentTarget;
@@ -34,6 +35,8 @@ public class ExhibitInteractor : MonoBehaviour
     private void Awake()
     {
         interactAction = controls.FindActionMap("Player", true).FindAction("Interact", true);
+        if (mobileInspectButton != null)
+            mobileInspectButton.SetActive(false);
     }
 
     private void OnEnable() => interactAction.performed += OnInteract;
@@ -64,6 +67,11 @@ public class ExhibitInteractor : MonoBehaviour
     private void UpdateFeedback()
     {
         bool hasTarget = currentTarget != null;
+
+        if (mobileInspectButton != null)
+            mobileInspectButton.SetActive(hasTarget);
+
+        promptLabel.color = hasTarget ? targetColor : idleColor;
 
         crosshair.color = hasTarget ? targetColor : idleColor;
         promptLabel.gameObject.SetActive(hasTarget);
